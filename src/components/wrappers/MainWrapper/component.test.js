@@ -1,10 +1,10 @@
 import React from 'react'
 
-import Wrapper from '.'
+import MainWrapper from '.'
 
-describe('Wrapper:', () => {
+describe('MainWrapper:', () => {
   test('should match snapshot', () => {
-    const component = shallow(<Wrapper />)
+    const component = shallow(<MainWrapper />)
     expect(component).toMatchSnapshot()
   })
 })

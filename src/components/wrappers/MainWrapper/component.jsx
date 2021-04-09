@@ -5,7 +5,7 @@ import { Typography, withStyles } from '@material-ui/core'
 
 import styles from './styles'
 
-function Wrapper({ classes, children }) {
+function MainWrapper({ classes, children }) {
   return (
     <Typography
       className={classes.tableContent}
@@ -17,10 +17,10 @@ function Wrapper({ classes, children }) {
   )
 }
 
-Wrapper.propTypes = {
+MainWrapper.propTypes = {
   children: PropTypes.element,
 }
 
-Wrapper.defaultProps = { children: null }
+MainWrapper.defaultProps = { children: null }
 
-export default withStyles(styles, { withTheme: true })(Wrapper)
+export default withStyles(styles, { withTheme: true })(MainWrapper)
