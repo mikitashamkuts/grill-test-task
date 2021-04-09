@@ -15,10 +15,7 @@
     "react/no-danger": [0],
     "react-hooks/rules-of-hooks": "warn",
     "react-hooks/exhaustive-deps": "warn",
-    "jsx-quotes": [
-      "error",
-      "prefer-double"
-    ],
+    "jsx-quotes": ["error", "prefer-double"],
     "jsx-a11y/anchor-is-valid": 0,
     "no-shadow": 0,
     "no-unused-expressions": 0,
@@ -28,6 +25,7 @@
     "no-unneeded-ternary": 0,
     "array-callback-return": 0,
     "import/no-unresolved": 0,
-    "jsx-a11y/label-has-associated-control": 0
-      }
+    "jsx-a11y/label-has-associated-control": 0,
+    "spaced-comment": 0
+  }
 }
