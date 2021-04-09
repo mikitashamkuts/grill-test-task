@@ -5,7 +5,7 @@ import { Typography, withStyles } from '@material-ui/core'
 
 import { APP_NAME } from '@/constants'
 import MainMenu from '@/components/menu/MainMenu'
-
+import Wrapper from '@/components/Wrapper'
 import styles from './styles'
 
 function HomePage({ classes }) {
@@ -13,6 +13,11 @@ function HomePage({ classes }) {
     <MainMenu
       topPanel={
         <Typography className={classes.topMenuSmall}>{APP_NAME}</Typography>
+      }
+      routedComponents={
+        <Wrapper>
+          <Typography className={classes.topMenuSmall}>{APP_NAME}</Typography>
+        </Wrapper>
       }
     />
   )
