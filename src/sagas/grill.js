@@ -1,5 +1,4 @@
-import { takeEvery, call, put, select } from 'redux-saga/effects'
-import { grillConfig } from '@/store'
+import { takeLatest, put } from 'redux-saga/effects'
 
 import {
   GET_USER_INPUT_FOR_GRILL_CONFIG,
@@ -9,11 +8,9 @@ import {
 export function* setGrillConfigWorker({ payload }) {
   try {
     yield put(setGrillConfigAction(payload))
-    const test = yield select(grillConfig)
-    yield call(console.log('value ', test))
   } catch (error) {}
 }
 
 export function* grillWatcher() {
-  yield takeEvery(GET_USER_INPUT_FOR_GRILL_CONFIG, setGrillConfigWorker)
+  yield takeLatest(GET_USER_INPUT_FOR_GRILL_CONFIG, setGrillConfigWorker)
 }

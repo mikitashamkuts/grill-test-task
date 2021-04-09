@@ -22,6 +22,7 @@ describe('Grill actions:', () => {
   test('getUserInputForGrillConfigAction should return GET_USER_INPUT_FOR_GRILL_CONFIG', () => {
     expect(getUserInputForGrillConfigAction(payload)).toMatchInlineSnapshot(`
       Object {
+        "payload": Object {},
         "type": "GET_USER_INPUT_FOR_GRILL_CONFIG",
       }
     `)
