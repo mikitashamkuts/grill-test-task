@@ -1,3 +1,8 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Grill layout: should match snapshot 1`] = `<WithStyles(GrillInput) />`;
+exports[`Grill layout: should match snapshot 1`] = `
+<Fragment>
+  <WithStyles(GrillPanel) />
+  <WithStyles(GrillInput) />
+</Fragment>
+`;
