@@ -5,13 +5,13 @@ import { Paper } from '@material-ui/core'
 
 import GrillInput from '@/components/controls/GrillInput'
 import OutOfGrillTable from '@/components/tables/OutOfGrillTable'
-import GrillPanel from '@/components/grill/GrillPanel'
+import GrillDashboard from '@/components/dashboards/GrillDashboard'
 
 function Grill() {
   return (
     <>
-      <GrillPanel />
-      <OutOfGrillTable/>
+      <GrillDashboard />
+      <OutOfGrillTable />
       <GrillInput />
     </>
   )

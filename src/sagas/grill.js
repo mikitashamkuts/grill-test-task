@@ -32,7 +32,7 @@ export function* setGrillConfigWorker({ payload }) {
         fitsItems.push({
           positionX: item.fit.x,
           positionY: item.fit.y,
-          with: item.width,
+          width: item.width,
           height: item.height,
           title: item.title,
         })
