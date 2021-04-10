@@ -14,9 +14,15 @@ import {
   withStyles,
 } from '@material-ui/core'
 
+import OutOfGrillTableRow from '@/components/tables/OutOfGrillTableRow'
+
 import styles from './styles'
 
 function OutOfGrillTable({ classes }) {
+  const outOfGrillItems = useSelector(
+    state => state.grillReducers.outOfGrillItems
+  )
+
   return (
     <TableContainer component={Paper}>
       <Typography
@@ -31,10 +37,21 @@ function OutOfGrillTable({ classes }) {
         <TableHead>
           <TableRow>
             <TableCell>Type </TableCell>
-            <TableCell align="right">Size</TableCell>
+            <TableCell>Size</TableCell>
           </TableRow>
         </TableHead>
-        <TableBody>{}</TableBody>
+        <TableBody>
+          {outOfGrillItems.map(({ title, width, height }, index) => {
+            return (
+              <OutOfGrillTableRow
+                key={title + index}
+                title={title}
+                width={width}
+                height={height}
+              />
+            )
+          })}
+        </TableBody>
       </Table>
     </TableContainer>
   )

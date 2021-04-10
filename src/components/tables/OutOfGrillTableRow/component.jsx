@@ -6,16 +6,14 @@ import { TableCell, TableRow, withStyles } from '@material-ui/core'
 
 import styles from './styles'
 
-function OutOfGrillTableRow() {
+function OutOfGrillTableRow({ styles, title, width, height }) {
   return (
-    <div>
-      <TableRow key={row.name}>
-        <TableCell component="th" scope="row">
-          {row.name}
-        </TableCell>
-        <TableCell align="right">{row.calories}</TableCell>
-      </TableRow>
-    </div>
+    <TableRow>
+      <TableCell component="th" scope="row">
+        {title}
+      </TableCell>
+      <TableCell>{`${width}x${height}`}</TableCell>
+    </TableRow>
   )
 }
 

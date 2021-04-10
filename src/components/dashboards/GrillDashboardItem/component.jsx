@@ -8,11 +8,21 @@ import {
   TextField,
   Typography,
   withStyles,
+  positions,
+  Box,
+  Paper,
 } from '@material-ui/core'
 
 import styles from './styles'
 
-function GrillItem({ classes, title }) {
+function GrillDashboardItem({
+  classes,
+  title,
+  height,
+  width,
+  positionY,
+  positionX,
+}) {
   const [anchorEl, setAnchorEl] = React.useState(null)
 
   const handleClick = event => {
@@ -28,8 +38,16 @@ function GrillItem({ classes, title }) {
 
   return (
     <>
-      <Button
-        style={{ height: '10px' }}
+      <Paper
+        style={{
+          position: 'absolute',
+          height: `${height}px`,
+          width: `${width}px`,
+          top: positionY,
+          left: positionX,
+          background: 'red',
+          border: '1px solid white',
+        }}
         aria-describedby={id}
         variant="contained"
         color="primary"
@@ -55,6 +73,6 @@ function GrillItem({ classes, title }) {
   )
 }
 
-GrillItem.propTypes = {}
+GrillDashboardItem.propTypes = {}
 
-export default withStyles(styles, { withTheme: true })(GrillItem)
+export default withStyles(styles, { withTheme: true })(GrillDashboardItem)
