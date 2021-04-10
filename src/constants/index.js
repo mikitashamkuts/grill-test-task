@@ -1,1 +1,1 @@
-export const APP_NAME = 'GRILL'
+export const APP_NAME = 'Grillmaster'
