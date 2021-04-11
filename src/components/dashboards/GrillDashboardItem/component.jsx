@@ -1,7 +1,13 @@
 import React, { useState } from 'react'
 import PropTypes from 'prop-types'
+import { useSelector } from 'react-redux'
 
 import { Popover, Typography, withStyles, Card } from '@material-ui/core'
+
+import {
+  calculateItemProportions,
+  calculateItemPositionInProportion,
+} from '@/utils/calculators'
 
 import styles from './styles'
 
@@ -12,8 +18,10 @@ function GrillDashboardItem({
   width,
   positionY,
   positionX,
+  widthOfContainer,
 }) {
   const [anchorEl, setAnchorEl] = useState(null)
+  const grillSize = useSelector(state => state.grillReducers.grillSize)
 
   const handleClick = event => {
     setAnchorEl(event.currentTarget)
@@ -32,10 +40,26 @@ function GrillDashboardItem({
         onClick={handleClick}
         className={classes.item}
         style={{
-          height: `${height}px`,
-          width: `${width}px`,
-          top: positionY,
-          left: positionX,
+          height: `${calculateItemProportions(
+            height,
+            widthOfContainer,
+            grillSize.width
+          )}px`,
+          width: `${calculateItemProportions(
+            width,
+            widthOfContainer,
+            grillSize.width
+          )}px`,
+          top: `${calculateItemPositionInProportion(
+            positionY,
+            widthOfContainer,
+            grillSize.width
+          )}px`,
+          left: `${calculateItemPositionInProportion(
+            positionX,
+            widthOfContainer,
+            grillSize.width
+          )}px`,
         }}
         aria-describedby={id}
         variant="outlined"
@@ -47,7 +71,7 @@ function GrillDashboardItem({
         open={open}
         anchorEl={anchorEl}
         anchorOrigin={{
-          vertical: 'bottom',
+          vertical: 'top',
           horizontal: 'center',
         }}
         transformOrigin={{
@@ -55,7 +79,7 @@ function GrillDashboardItem({
           horizontal: 'center',
         }}
       >
-        <Typography>{title}</Typography>
+        <Typography className={classes.popover}>{title}</Typography>
       </Popover>
     </>
   )
@@ -68,6 +92,7 @@ GrillDashboardItem.propTypes = {
   height: PropTypes.number,
   positionY: PropTypes.number,
   positionX: PropTypes.number,
+  widthOfContainer: PropTypes.number.isRequired,
 }
 GrillDashboardItem.defaultProps = {
   title: null,

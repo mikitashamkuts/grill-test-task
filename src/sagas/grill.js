@@ -6,14 +6,24 @@ import { grillConfig as userGrillConfig } from '@/store'
 import {
   GET_USER_INPUT_FOR_GRILL_CONFIG,
   setGrillConfigAction,
-  setFitsItemsAction,
+  setFitsGrillItemsAction,
   setOutOfGrillItemsAction,
+  setGrillSizeAction,
 } from '@/actions'
+
+// this saga contains all the logic of the core feature
 
 export function* setGrillConfigWorker({ payload }) {
   try {
     yield put(setGrillConfigAction(JSON.parse(payload)))
     const grillConfig = yield select(userGrillConfig)
+
+    yield put(
+      setGrillSizeAction({
+        height: grillConfig.grill.height,
+        width: grillConfig.grill.width,
+      })
+    )
 
     const packer = yield new GrillSortingAlgorithm(
       grillConfig.grill.width,
@@ -24,12 +34,12 @@ export function* setGrillConfigWorker({ payload }) {
       grillConfig.grill.grillItems
     )
     yield packer.fit(parsedItems)
-    const fitsItems = yield []
+    const fitsGrillItems = yield []
     const outOfGrillItems = yield []
     for (let n = 0; n < parsedItems.length; n++) {
       const item = parsedItems[n]
       if (item.fit) {
-        fitsItems.push({
+        fitsGrillItems.push({
           positionX: item.fit.x,
           positionY: item.fit.y,
           width: item.width,
@@ -44,7 +54,7 @@ export function* setGrillConfigWorker({ payload }) {
         })
       }
     }
-    yield put(setFitsItemsAction(fitsItems))
+    yield put(setFitsGrillItemsAction(fitsGrillItems))
     yield put(setOutOfGrillItemsAction(outOfGrillItems))
   } catch (error) {}
 }
