@@ -17,14 +17,13 @@ function GrillDashboard() {
 
   return (
     <>
-      <div
+      <Paper
         style={{
           position: 'relative',
           width: `${grillConfig?.grill?.width || defaultGrillConfig.width}px`,
           height: `${
             grillConfig?.grill?.height || defaultGrillConfig.height
           }px`,
-          background: 'green',
         }}
         variant="outlined"
       >
@@ -39,7 +38,7 @@ function GrillDashboard() {
             />
           )
         })}
-      </div>
+      </Paper>
     </>
   )
 }

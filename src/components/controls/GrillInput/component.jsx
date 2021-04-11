@@ -20,7 +20,10 @@ function GrillInput({ classes }) {
       id="outlined-basic"
       label="Grill Config"
       variant="outlined"
+      multiline
+      rows={20}
       onChange={handleChange}
+      style={{ width: '100%' }}
     />
   )
 }
