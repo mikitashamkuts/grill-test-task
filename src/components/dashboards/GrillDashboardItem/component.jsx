@@ -12,6 +12,7 @@ function GrillDashboardItem({
   width,
   positionY,
   positionX,
+  widthOfContainer,
 }) {
   const [anchorEl, setAnchorEl] = useState(null)
 
@@ -68,6 +69,7 @@ GrillDashboardItem.propTypes = {
   height: PropTypes.number,
   positionY: PropTypes.number,
   positionX: PropTypes.number,
+  widthOfContainer: PropTypes.number.isRequired,
 }
 GrillDashboardItem.defaultProps = {
   title: null,

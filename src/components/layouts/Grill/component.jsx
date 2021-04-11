@@ -14,13 +14,15 @@ function Grill({ classes }) {
     <>
       <Grid container spacing={3}>
         <Grid item xs={8}>
-          <GrillDashboard />
+          <Grid>
+            <GrillDashboard />
+          </Grid>
+          <Grid className={classes.test}>
+            <GrillInput />
+          </Grid>
         </Grid>
         <Grid item xs={4}>
           <OutOfGrillTable />
-        </Grid>
-        <Grid item xs={8}>
-          <GrillInput />
         </Grid>
       </Grid>
     </>
