@@ -5,7 +5,7 @@ import { useSelector } from 'react-redux'
 import { Paper, withStyles } from '@material-ui/core'
 
 import GrillDashboardItem from '@/components/dashboards/GrillDashboardItem'
-import { calculateProportions } from '@/utils/calculators/'
+import { calculateHeightInProportions } from '@/utils/calculators/'
 
 import styles from './styles'
 
@@ -24,7 +24,7 @@ function GrillDashboard({ classes }) {
 
   useEffect(() => {
     setGrillDisplayHeight(
-      calculateProportions(
+      calculateHeightInProportions(
         grillSize.width || defaultGrillSize.with,
         grillSize.height || defaultGrillSize.height,
         ref.current.offsetWidth

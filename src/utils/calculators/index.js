@@ -1,10 +1,24 @@
-export const calculateProportions = (width, height, blockWidthOnScreen) => {
+// get height of an element in proportion
+
+export const calculateHeightInProportions = (
+  width,
+  height,
+  blockWidthOnScreen
+) => {
   const widthInOnePersent = width / 100 // 100%
   const heightInPersent = height / widthInOnePersent
   const pixelsInOnePersent = blockWidthOnScreen / 100 // 100%
   return pixelsInOnePersent * heightInPersent
 }
 
-export const calculateItemDisplaySize=(width, height, blockWidthOnScreen)=>{
+// get proportions of an element
 
+export const calculateItemProportions = (
+  sizeOfItem,
+  blockWidthOnScreen,
+  widthOfGrill
+) => {
+  const onePersentOfWidthinPixels = blockWidthOnScreen / widthOfGrill
+  const onePersent = widthOfGrill / 100 // 100%
+  return (sizeOfItem / onePersent) * onePersent * onePersentOfWidthinPixels
 }

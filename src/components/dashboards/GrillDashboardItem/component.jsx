@@ -1,7 +1,10 @@
 import React, { useState } from 'react'
 import PropTypes from 'prop-types'
+import { useSelector } from 'react-redux'
 
 import { Popover, Typography, withStyles, Card } from '@material-ui/core'
+
+import { calculateItemProportions } from '@/utils/calculators'
 
 import styles from './styles'
 
@@ -15,6 +18,7 @@ function GrillDashboardItem({
   widthOfContainer,
 }) {
   const [anchorEl, setAnchorEl] = useState(null)
+  const grillSize = useSelector(state => state.grillReducers.grillSize)
 
   const handleClick = event => {
     setAnchorEl(event.currentTarget)
@@ -33,8 +37,16 @@ function GrillDashboardItem({
         onClick={handleClick}
         className={classes.item}
         style={{
-          height: `${height}px`,
-          width: `${width}px`,
+          height: `${calculateItemProportions(
+            height,
+            widthOfContainer,
+            grillSize.width
+          )}px`,
+          width: `${calculateItemProportions(
+            width,
+            widthOfContainer,
+            grillSize.width
+          )}px`,
           top: positionY,
           left: positionX,
         }}
