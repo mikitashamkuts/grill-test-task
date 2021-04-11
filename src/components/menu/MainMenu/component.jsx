@@ -1,18 +1,18 @@
 /*
-Use props topPanel to add menu items
-and props routedComponents to add routed components on Home layout
+  Use props topPanel to add menu items and props 
+  routedComponents to add routed components on Home layout
 */
 
 import React from 'react'
 import PropTypes from 'prop-types'
 
-import { withStyles, AppBar, Toolbar, CssBaseline } from '@material-ui/core'
-
 import clsx from 'clsx'
+
+import { withStyles, AppBar, Toolbar, CssBaseline } from '@material-ui/core'
 
 import styles from './styles'
 
-function MainMenu({ topPanel, routedComponents, classes, theme }) {
+function MainMenu({ classes, topPanel, routedComponents, theme }) {
   return (
     <div className={classes.root}>
       <CssBaseline />
@@ -30,9 +30,10 @@ function MainMenu({ topPanel, routedComponents, classes, theme }) {
 }
 
 MainMenu.propTypes = {
+  classes: PropTypes.oneOfType([PropTypes.object]).isRequired,
   topPanel: PropTypes.node.isRequired,
+  routedComponents: PropTypes.node.isRequired,
 }
-
 MainMenu.defaultProps = {}
 
 export default withStyles(styles, { withTheme: true })(MainMenu)

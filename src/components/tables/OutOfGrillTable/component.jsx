@@ -12,7 +12,6 @@ import {
   TableRow,
   Typography,
   withStyles,
-  TablePagination,
 } from '@material-ui/core'
 
 import OutOfGrillTableRow from '@/components/tables/OutOfGrillTableRow'
@@ -37,7 +36,7 @@ function OutOfGrillTable({ classes }) {
       <Table className={classes.table} size="medium" aria-label="a dense table">
         <TableHead>
           <TableRow>
-            <TableCell>Type </TableCell>
+            <TableCell>Type</TableCell>
             <TableCell>Size</TableCell>
           </TableRow>
         </TableHead>
@@ -57,5 +56,10 @@ function OutOfGrillTable({ classes }) {
     </TableContainer>
   )
 }
+
+OutOfGrillTable.propTypes = {
+  classes: PropTypes.oneOfType([PropTypes.object]).isRequired,
+}
+OutOfGrillTable.defaultProps = {}
 
 export default withStyles(styles, { withTheme: true })(OutOfGrillTable)

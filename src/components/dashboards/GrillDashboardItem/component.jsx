@@ -1,18 +1,7 @@
-import React from 'react'
+import React, { useState } from 'react'
 import PropTypes from 'prop-types'
-import { useDispatch } from 'react-redux'
 
-import {
-  Button,
-  Popover,
-  TextField,
-  Typography,
-  withStyles,
-  positions,
-  Box,
-  Paper,
-  Card,
-} from '@material-ui/core'
+import { Popover, Typography, withStyles, Card } from '@material-ui/core'
 
 import styles from './styles'
 
@@ -24,7 +13,7 @@ function GrillDashboardItem({
   positionY,
   positionX,
 }) {
-  const [anchorEl, setAnchorEl] = React.useState(null)
+  const [anchorEl, setAnchorEl] = useState(null)
 
   const handleClick = event => {
     setAnchorEl(event.currentTarget)
@@ -35,29 +24,28 @@ function GrillDashboardItem({
   }
 
   const open = Boolean(anchorEl)
-  const id = open ? 'simple-popover' : undefined
+  const id = open ? 'simple-popover' : null
 
   return (
     <>
       <Card
+        onClick={handleClick}
+        className={classes.item}
         style={{
-          border: '1px solid ',
-          position: 'absolute',
           height: `${height}px`,
           width: `${width}px`,
           top: positionY,
           left: positionX,
         }}
         aria-describedby={id}
-        variant="contained"
+        variant="outlined"
         color="secondary"
-        onClick={handleClick}
       />
       <Popover
+        onClose={handleClose}
         id={id}
         open={open}
         anchorEl={anchorEl}
-        onClose={handleClose}
         anchorOrigin={{
           vertical: 'bottom',
           horizontal: 'center',
@@ -67,12 +55,26 @@ function GrillDashboardItem({
           horizontal: 'center',
         }}
       >
-        <Typography className={classes.typography}>{title}</Typography>
+        <Typography>{title}</Typography>
       </Popover>
     </>
   )
 }
 
-GrillDashboardItem.propTypes = {}
+GrillDashboardItem.propTypes = {
+  classes: PropTypes.oneOfType([PropTypes.object]).isRequired,
+  title: PropTypes.string,
+  width: PropTypes.number,
+  height: PropTypes.number,
+  positionY: PropTypes.number,
+  positionX: PropTypes.number,
+}
+GrillDashboardItem.defaultProps = {
+  title: null,
+  width: null,
+  height: null,
+  positionY: null,
+  positionX: null,
+}
 
 export default withStyles(styles, { withTheme: true })(GrillDashboardItem)
