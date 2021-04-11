@@ -11,6 +11,7 @@ import {
   positions,
   Box,
   Paper,
+  Card,
 } from '@material-ui/core'
 
 import styles from './styles'
@@ -38,19 +39,18 @@ function GrillDashboardItem({
 
   return (
     <>
-      <Paper
+      <Card
         style={{
+          border: '1px solid ',
           position: 'absolute',
           height: `${height}px`,
           width: `${width}px`,
           top: positionY,
           left: positionX,
-          background: 'red',
-          border: '1px solid white',
         }}
         aria-describedby={id}
         variant="contained"
-        color="primary"
+        color="secondary"
         onClick={handleClick}
       />
       <Popover
