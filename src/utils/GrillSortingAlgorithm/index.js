@@ -10,6 +10,8 @@ when sorted by max(width,height).
 
 ******************************************************************************/
 
+
+
 const GrillSortingAlgorithm = function (w, h) {
   this.init(w, h)
 }

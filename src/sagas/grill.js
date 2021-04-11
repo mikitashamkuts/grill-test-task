@@ -26,8 +26,8 @@ export function* setGrillConfigWorker({ payload }) {
     yield packer.fit(parsedItems)
     const fitsItems = yield []
     const outOfGrillItems = yield []
-    for (var n = 0; n < parsedItems.length; n++) {
-      var item = parsedItems[n]
+    for (let n = 0; n < parsedItems.length; n++) {
+      const item = parsedItems[n]
       if (item.fit) {
         fitsItems.push({
           positionX: item.fit.x,

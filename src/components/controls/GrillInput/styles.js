@@ -1,6 +1,6 @@
 const styles = theme => ({
-  toolbar: {
-    color: 'inherit',
+  textField: {
+    width: '100%',
   },
 })
 

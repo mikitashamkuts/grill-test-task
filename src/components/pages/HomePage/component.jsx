@@ -13,9 +13,7 @@ import styles from './styles'
 function HomePage({ classes }) {
   return (
     <MainMenu
-      topPanel={
-        <Typography className={classes.topMenuSmall}>{APP_NAME}</Typography>
-      }
+      topPanel={<Typography>{APP_NAME}</Typography>}
       routedComponents={
         <MainWrapper>
           <Grill />
@@ -26,5 +24,6 @@ function HomePage({ classes }) {
 }
 
 HomePage.propTypes = {}
+HomePage.defaultProps = {}
 
 export default withStyles(styles, { withTheme: true })(HomePage)

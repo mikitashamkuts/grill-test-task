@@ -1,13 +1,15 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 
-import { Paper, Grid } from '@material-ui/core'
+import { Grid, withStyles } from '@material-ui/core'
 
 import GrillInput from '@/components/controls/GrillInput'
 import OutOfGrillTable from '@/components/tables/OutOfGrillTable'
 import GrillDashboard from '@/components/dashboards/GrillDashboard'
 
-function Grill() {
+import styles from './styles'
+
+function Grill({ classes }) {
   return (
     <>
       <Grid container spacing={3}>
@@ -26,7 +28,6 @@ function Grill() {
 }
 
 Grill.propTypes = {}
-
 Grill.defaultProps = {}
 
-export default Grill
+export default withStyles(styles, { withTheme: true })(Grill)

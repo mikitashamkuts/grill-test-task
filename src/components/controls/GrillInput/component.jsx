@@ -17,17 +17,18 @@ function GrillInput({ classes }) {
 
   return (
     <TextField
+      onChange={handleChange}
+      className={classes.textField}
       id="outlined-basic"
       label="Grill Config"
       variant="outlined"
       multiline
       rows={20}
-      onChange={handleChange}
-      style={{ width: '100%' }}
     />
   )
 }
 
 GrillInput.propTypes = {}
+GrillInput.defaultProps = {}
 
 export default withStyles(styles, { withTheme: true })(GrillInput)

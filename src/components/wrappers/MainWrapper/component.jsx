@@ -20,7 +20,6 @@ function MainWrapper({ classes, children }) {
 MainWrapper.propTypes = {
   children: PropTypes.element,
 }
-
 MainWrapper.defaultProps = { children: null }
 
 export default withStyles(styles, { withTheme: true })(MainWrapper)
