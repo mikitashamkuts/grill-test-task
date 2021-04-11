@@ -4,7 +4,10 @@ import { useSelector } from 'react-redux'
 
 import { Popover, Typography, withStyles, Card } from '@material-ui/core'
 
-import { calculateItemProportions } from '@/utils/calculators'
+import {
+  calculateItemProportions,
+  calculateItemPositionInProportion,
+} from '@/utils/calculators'
 
 import styles from './styles'
 
@@ -47,8 +50,16 @@ function GrillDashboardItem({
             widthOfContainer,
             grillSize.width
           )}px`,
-          top: positionY,
-          left: positionX,
+          top: `${calculateItemPositionInProportion(
+            positionY,
+            widthOfContainer,
+            grillSize.width
+          )}px`,
+          left: `${calculateItemPositionInProportion(
+            positionX,
+            widthOfContainer,
+            grillSize.width
+          )}px`,
         }}
         aria-describedby={id}
         variant="outlined"
@@ -60,7 +71,7 @@ function GrillDashboardItem({
         open={open}
         anchorEl={anchorEl}
         anchorOrigin={{
-          vertical: 'bottom',
+          vertical: 'top',
           horizontal: 'center',
         }}
         transformOrigin={{
@@ -68,7 +79,7 @@ function GrillDashboardItem({
           horizontal: 'center',
         }}
       >
-        <Typography>{title}</Typography>
+        <Typography className={classes.popover}>{title}</Typography>
       </Popover>
     </>
   )

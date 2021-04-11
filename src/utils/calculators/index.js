@@ -22,3 +22,13 @@ export const calculateItemProportions = (
   const onePersent = widthOfGrill / 100 // 100%
   return (sizeOfItem / onePersent) * onePersent * onePersentOfWidthinPixels
 }
+
+// get offset of an element in proportion
+
+export const calculateItemPositionInProportion = (
+  position,
+  widthOfContainer,
+  widthOfGrill
+) => {
+  return position * (widthOfContainer / widthOfGrill)
+}
