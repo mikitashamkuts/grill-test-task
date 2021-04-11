@@ -61,7 +61,20 @@ function GrillDashboardItem({
   )
 }
 
-GrillDashboardItem.propTypes = {}
-GrillDashboardItem.defaultProps = {}
+GrillDashboardItem.propTypes = {
+  classes: PropTypes.oneOfType([PropTypes.object]).isRequired,
+  title: PropTypes.string,
+  width: PropTypes.number,
+  height: PropTypes.number,
+  positionY: PropTypes.number,
+  positionX: PropTypes.number,
+}
+GrillDashboardItem.defaultProps = {
+  title: null,
+  width: null,
+  height: null,
+  positionY: null,
+  positionX: null,
+}
 
 export default withStyles(styles, { withTheme: true })(GrillDashboardItem)

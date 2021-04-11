@@ -18,6 +18,7 @@ function MainWrapper({ classes, children }) {
 }
 
 MainWrapper.propTypes = {
+  classes: PropTypes.oneOfType([PropTypes.object]).isRequired,
   children: PropTypes.element,
 }
 MainWrapper.defaultProps = { children: null }

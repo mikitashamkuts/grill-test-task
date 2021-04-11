@@ -27,7 +27,9 @@ function Grill({ classes }) {
   )
 }
 
-Grill.propTypes = {}
+Grill.propTypes = {
+  classes: PropTypes.oneOfType([PropTypes.object]).isRequired,
+}
 Grill.defaultProps = {}
 
 export default withStyles(styles, { withTheme: true })(Grill)

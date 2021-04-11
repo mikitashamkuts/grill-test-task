@@ -16,7 +16,12 @@ function OutOfGrillTableRow({ classes, title, width, height }) {
   )
 }
 
-OutOfGrillTableRow.propTypes = {}
-OutOfGrillTableRow.defaultProps = {}
+OutOfGrillTableRow.propTypes = {
+  classes: PropTypes.oneOfType([PropTypes.object]).isRequired,
+  title: PropTypes.string,
+  width: PropTypes.number,
+  height: PropTypes.number,
+}
+OutOfGrillTableRow.defaultProps = { title: null, width: null, height: null }
 
 export default withStyles(styles, { withTheme: true })(OutOfGrillTableRow)

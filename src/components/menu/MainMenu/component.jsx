@@ -30,7 +30,9 @@ function MainMenu({ classes, topPanel, routedComponents, theme }) {
 }
 
 MainMenu.propTypes = {
+  classes: PropTypes.oneOfType([PropTypes.object]).isRequired,
   topPanel: PropTypes.node.isRequired,
+  routedComponents: PropTypes.node.isRequired,
 }
 MainMenu.defaultProps = {}
 

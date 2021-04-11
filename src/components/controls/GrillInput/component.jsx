@@ -28,7 +28,9 @@ function GrillInput({ classes }) {
   )
 }
 
-GrillInput.propTypes = {}
+GrillInput.propTypes = {
+  classes: PropTypes.oneOfType([PropTypes.object]).isRequired,
+}
 GrillInput.defaultProps = {}
 
 export default withStyles(styles, { withTheme: true })(GrillInput)

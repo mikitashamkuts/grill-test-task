@@ -57,7 +57,9 @@ function OutOfGrillTable({ classes }) {
   )
 }
 
-OutOfGrillTable.propTypes = {}
+OutOfGrillTable.propTypes = {
+  classes: PropTypes.oneOfType([PropTypes.object]).isRequired,
+}
 OutOfGrillTable.defaultProps = {}
 
 export default withStyles(styles, { withTheme: true })(OutOfGrillTable)

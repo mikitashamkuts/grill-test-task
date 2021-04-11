@@ -46,7 +46,9 @@ function GrillDashboard({ classes }) {
   )
 }
 
-GrillDashboard.propTypes = {}
+GrillDashboard.propTypes = {
+  classes: PropTypes.oneOfType([PropTypes.object]).isRequired,
+}
 GrillDashboard.defaultProps = {}
 
 export default withStyles(styles, { withTheme: true })(GrillDashboard)
