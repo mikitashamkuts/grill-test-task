@@ -21,6 +21,8 @@ MainWrapper.propTypes = {
   classes: PropTypes.oneOfType([PropTypes.object]).isRequired,
   children: PropTypes.element,
 }
-MainWrapper.defaultProps = { children: null }
+MainWrapper.defaultProps = {
+  children: null,
+}
 
 export default withStyles(styles, { withTheme: true })(MainWrapper)

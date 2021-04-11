@@ -38,7 +38,7 @@ function GrillDashboardItem({
           left: positionX,
         }}
         aria-describedby={id}
-        variant="contained"
+        variant="outlined"
         color="secondary"
       />
       <Popover
