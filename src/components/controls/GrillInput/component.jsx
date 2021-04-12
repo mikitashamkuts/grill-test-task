@@ -19,7 +19,7 @@ function GrillInput({ classes }) {
     <TextField
       onChange={handleChange}
       className={classes.textField}
-      data-test="screen"
+      data-test="grillInput"
       id="outlined-basic"
       label="Grill Config"
       variant="outlined"
