@@ -6,13 +6,12 @@ Test task "Grill".
 
 ## Technologies
 
-Project is created with:
+Project is created and tested with:
 
 - [React](https://github.com/facebook/create-react-app)
 - [Redux](https://redux.js.org/)
 - [Redux-Saga](https://redux-saga.js.org/)
 - [MATERIAL-UI](https://material-ui.com/)
-  Project is tested with:
 - [Enzyme](https://enzymejs.github.io/enzyme/)
 - [Jest](https://jestjs.io/)
 - [Cypress](https://www.cypress.io/)
