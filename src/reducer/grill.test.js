@@ -61,7 +61,7 @@ describe('Grill reducer:', () => {
     `)
     const store = grillReducers(
       grillDefaultState,
-      setGrillConfigAction(payload)
+      setFitsGrillItemsAction(payload)
     )
     expect(store.fitsGrillItems).toEqual(payload)
   })

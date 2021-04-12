@@ -1,16 +1,16 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`MainMenu: should match snapshot 1`] = `
-<MainMenu
+exports[`GrillDashboardItem: should match snapshot 1`] = `
+<GrillDashboardItem
   classes={
     Object {
-      "appBar": "MainMenu-appBar-2",
-      "mainContent": "MainMenu-mainContent-4",
-      "root": "MainMenu-root-1",
-      "toolbar": "MainMenu-toolbar-3",
+      "item": "GrillDashboardItem-item-1",
+      "popover": "GrillDashboardItem-popover-2",
     }
   }
-  routedComponents="test"
+  height={1}
+  positionX={1}
+  positionY={1}
   theme={
     Object {
       "breakpoints": Object {
@@ -301,6 +301,8 @@ exports[`MainMenu: should match snapshot 1`] = `
       },
     }
   }
-  topPanel="test"
+  title="test"
+  width={1}
+  widthOfContainer={1}
 />
 `;

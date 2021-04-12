@@ -54,23 +54,12 @@ describe('Grill sagas:', () => {
       test('should execute successful case', async () => {
         await expectSaga(setGrillConfigWorker)
           .put(setGrillConfigAction(data))
-          //.select(userGrillConfig)
           .put(
             setGrillSizeAction({
               height: grillConfig.grill.height,
               width: grillConfig.grill.width,
             })
           )
-          // .call(
-          //   new GrillSortingAlgorithm(
-          //     grillConfig.grill.width,
-          //     grillConfig.grill.height
-          //   )
-          // )
-          // .call(packer.parsItems, grillConfig.grill.grillItems)
-          // .call(packer.fit(parsedItems))
-          // .put(setFitsGrillItemsAction(fitsGrillItems))
-          // .put(setOutOfGrillItemsAction(outOfGrillItems))
       })
     })
     describe('failed case', () => {})

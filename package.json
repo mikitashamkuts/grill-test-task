@@ -101,6 +101,9 @@
     "stylelint-processor-styled-components": "^1.10.0"
   },
   "jest": {
+    "modulePathIgnorePatterns": [
+      ".*/*spec.js"
+    ],
     "verbose": true,
     "clearMocks": true,
     "collectCoverage": true,
