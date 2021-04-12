@@ -7,7 +7,7 @@ import styles from './styles'
 
 function OutOfGrillTableRow({ classes, title, width, height }) {
   return (
-    <TableRow>
+    <TableRow data-test="screen">
       <TableCell component="th" scope="row">
         {title}
       </TableCell>

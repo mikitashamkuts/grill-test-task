@@ -1,8 +1,12 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`GrillPanel: should match snapshot 1`] = `
-<GrillPanel
-  classes={Object {}}
+exports[`GrillDashboard: should match snapshot 1`] = `
+<GrillDashboard
+  classes={
+    Object {
+      "dashboard": "GrillDashboard-dashboard-1",
+    }
+  }
   theme={
     Object {
       "breakpoints": Object {

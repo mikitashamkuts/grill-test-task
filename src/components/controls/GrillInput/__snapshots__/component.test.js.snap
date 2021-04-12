@@ -4,7 +4,7 @@ exports[`GrillInput: should match snapshot 1`] = `
 <GrillInput
   classes={
     Object {
-      "toolbar": "GrillInput-toolbar-1",
+      "textField": "GrillInput-textField-1",
     }
   }
   theme={

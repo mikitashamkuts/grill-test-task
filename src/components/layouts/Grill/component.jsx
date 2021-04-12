@@ -12,7 +12,7 @@ import styles from './styles'
 function Grill({ classes }) {
   return (
     <>
-      <Grid container spacing={3}>
+      <Grid data-test="screen" container spacing={3}>
         <Grid item xs={8}>
           <Grid>
             <GrillDashboard />

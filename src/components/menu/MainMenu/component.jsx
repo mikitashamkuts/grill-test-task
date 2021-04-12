@@ -14,7 +14,7 @@ import styles from './styles'
 
 function MainMenu({ classes, topPanel, routedComponents, theme }) {
   return (
-    <div className={classes.root}>
+    <div className={classes.root} data-test="screen">
       <CssBaseline />
       <AppBar position="fixed" className={clsx(classes.appBar)}>
         <Toolbar>

@@ -61,6 +61,7 @@ function GrillDashboardItem({
             grillSize.width
           )}px`,
         }}
+        data-test="screen"
         aria-describedby={id}
         variant="outlined"
         color="secondary"

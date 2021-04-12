@@ -1,10 +1,10 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Grill layout: should match snapshot 1`] = `
-<Grill
+exports[`OutOfGrillPanel: should match snapshot 1`] = `
+<OutOfGrillTable
   classes={
     Object {
-      "test": "Grill-test-1",
+      "title": "OutOfGrillTable-title-1",
     }
   }
   theme={
