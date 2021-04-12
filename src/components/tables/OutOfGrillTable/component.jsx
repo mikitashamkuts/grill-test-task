@@ -24,7 +24,7 @@ function OutOfGrillTable({ classes }) {
   )
 
   return (
-    <TableContainer component={Paper}>
+    <TableContainer component={Paper} data-test="screen">
       <Typography
         className={classes.title}
         variant="h6"

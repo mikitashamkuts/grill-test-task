@@ -19,6 +19,7 @@ function HomePage({ classes }) {
           <Grill />
         </MainWrapper>
       }
+      data-test="screen"
     />
   )
 }

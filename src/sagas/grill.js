@@ -2,7 +2,6 @@ import { takeLatest, put, call, select } from 'redux-saga/effects'
 
 import GrillSortingAlgorithm from '@/utils/GrillSortingAlgorithm'
 import { grillConfig as userGrillConfig } from '@/store'
-
 import {
   GET_USER_INPUT_FOR_GRILL_CONFIG,
   setGrillConfigAction,

@@ -5,14 +5,12 @@ exports[`MainMenu: should match snapshot 1`] = `
   classes={
     Object {
       "appBar": "MainMenu-appBar-2",
-      "appBarShift": "MainMenu-appBarShift-3",
-      "content": "MainMenu-content-6",
-      "mainContent": "MainMenu-mainContent-7",
+      "mainContent": "MainMenu-mainContent-4",
       "root": "MainMenu-root-1",
-      "toolbar": "MainMenu-toolbar-5",
-      "topMenuButton": "MainMenu-topMenuButton-4",
+      "toolbar": "MainMenu-toolbar-3",
     }
   }
+  routedComponents="test"
   theme={
     Object {
       "breakpoints": Object {

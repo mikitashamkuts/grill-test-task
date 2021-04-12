@@ -27,7 +27,7 @@ function GrillDashboard({ classes }) {
       calculateHeightInProportions(
         grillSize.width || defaultGrillSize.with,
         grillSize.height || defaultGrillSize.height,
-        ref.current.offsetWidth
+        Math.floor(ref.current.offsetWidth)
       )
     )
   }, [ref.current, grillSize])
@@ -46,6 +46,7 @@ function GrillDashboard({ classes }) {
           width: grillDisplayConfig.width,
           height: grillDisplayConfig.height,
         }}
+        data-test="screen"
       >
         {fitsGrillItems.map(
           ({ title, height, width, positionX, positionY }, index) => {
@@ -57,7 +58,7 @@ function GrillDashboard({ classes }) {
                 width={width}
                 positionX={positionX}
                 positionY={positionY}
-                widthOfContainer={ref.current.offsetWidth}
+                widthOfContainer={Math.floor(ref.current.offsetWidth)}
               />
             )
           }

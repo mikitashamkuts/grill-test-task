@@ -23,7 +23,6 @@ function GrillInput({ classes }) {
       label="Grill Config"
       variant="outlined"
       multiline
-      rows={20}
     />
   )
 }

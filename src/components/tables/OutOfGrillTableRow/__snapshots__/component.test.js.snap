@@ -1,12 +1,9 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Grill layout: should match snapshot 1`] = `
-<Grill
-  classes={
-    Object {
-      "test": "Grill-test-1",
-    }
-  }
+exports[`OutOfGrillTableRow: should match snapshot 1`] = `
+<OutOfGrillTableRow
+  classes={Object {}}
+  height={null}
   theme={
     Object {
       "breakpoints": Object {
@@ -297,5 +294,7 @@ exports[`Grill layout: should match snapshot 1`] = `
       },
     }
   }
+  title={null}
+  width={null}
 />
 `;

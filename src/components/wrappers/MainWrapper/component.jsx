@@ -9,6 +9,7 @@ function MainWrapper({ classes, children }) {
   return (
     <Typography
       className={classes.tableContent}
+      data-test="screen"
       variant="body1"
       component="div"
     >

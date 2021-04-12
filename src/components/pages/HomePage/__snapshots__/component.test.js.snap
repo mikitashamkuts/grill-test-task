@@ -2,12 +2,7 @@
 
 exports[`HomePage: should match snapshot 1`] = `
 <HomePage
-  classes={
-    Object {
-      "toolbar": "HomePage-toolbar-1",
-      "topMenuSmall": "HomePage-topMenuSmall-2",
-    }
-  }
+  classes={Object {}}
   theme={
     Object {
       "breakpoints": Object {
