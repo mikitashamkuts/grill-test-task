@@ -1,12 +1,14 @@
-# GRILL
+# GRILL TEST TASK
 
 ## General info
+[Link to the task](https://docs.google.com/document/d/10X4RPsmydcjODT4hvpOV3PUSPiOdedMah4IGO_idx4g/edit?usp=sharing)
 
-Test task "Grill".
+## Deploy
+[https://grill-test-task.web.app](https://grill-test-task.web.app)
 
 ## Technologies
 
-Project is created and tested with:
+Task made with:
 
 - [React](https://github.com/facebook/create-react-app)
 - [Redux](https://redux.js.org/)
